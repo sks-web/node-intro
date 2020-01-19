@@ -1,0 +1,15 @@
+extends layouts/main-layouts.pug
+
+block content
+        main.main-product
+            each val in list
+                article.main-article
+                    header.card-header
+                        h1= val
+                    .card-body
+                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDj7cazt5wC4WDsKtY34IhkVcmwTGjKhQKo9Ks4AQwV8RoNftB", alt="No Image")
+                    footer.card-footer
+                        h2 Price: Rs 2
+                
+
+
