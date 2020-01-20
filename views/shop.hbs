@@ -1,0 +1,19 @@
+<main class="main-product">
+    {{#if isProduct}}
+    {{#each list}}
+    <article class="main-article">
+        <header class="card-header">
+            <h1>{{ this }}</h1>
+        </header>
+        <div class="card-body"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDj7cazt5wC4WDsKtY34IhkVcmwTGjKhQKo9Ks4AQwV8RoNftB"
+                alt="No Image Found"></div>
+        <footer class="card-footer">
+            <h2>Rs 20</h2>
+        </footer>
+    </article>
+    {{/each}}
+    {{ else }}
+    <h1>No Products</h1>
+    {{/if}}
+</main>

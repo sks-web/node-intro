@@ -3,7 +3,7 @@
 const express = require("express");
 const path = require("path");
 const routes = express.Router();
-const rootDir = require("../util/rootpath");
+// const rootDir = require("../util/rootpath");
 const adminData = require("./admin");
 
 // routes.get("/", (req, res, next) => {
@@ -13,7 +13,9 @@ const adminData = require("./admin");
 // });
 
 routes.get("/", (req, res, next) => {
-    res.render("shop", {list: adminData.products, title: "My Shops", path: "/"});
+    // res.render("shop", {list: adminData.products, pageTitle: "My Shops", path: "/", isProduct: adminData.products.length>0});
+    
+    res.render("shop",{list: adminData.products, pageTitle: "My Shop", path: "/", isProduct: adminData.products.length > 0});
 });
 
 module.exports = routes;
